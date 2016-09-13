@@ -6,7 +6,7 @@ Jenkins Swarm Client
 - [Usage](#usage)
 
 # Introduction
-Install and configure a jenkins-swarm-client onto a systemd based system.
+This is an ansible role to install and configure a jenkins-swarm-client onto a systemd based system.
 This will automatically register (or deregister if the client is stopped) the host to your jenkins master as a node.
 
 # Requirements
