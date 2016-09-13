@@ -1,0 +1,11 @@
+---
+- name: Ensure configuration
+  template:
+    src: '{{ swarm_client_service_template }}'
+    dest: '{{ swarm_client_service_path }}/{{ swarm_client_service_file }}'
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - systemd daemon-reload
+    - restart swarm client

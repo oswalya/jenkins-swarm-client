@@ -1,0 +1,8 @@
+---
+- name: systemd daemon-reload
+  command: /bin/systemctl daemon-reload
+
+- name: restart swarm client
+  service:
+    name: '{{ swarm_client_service_file }}'
+    state: restarted

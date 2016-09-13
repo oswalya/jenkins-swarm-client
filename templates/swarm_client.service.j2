@@ -1,0 +1,7 @@
+[Unit]
+Description=Jenkins swarm client which joins a master.
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar {{ swarm_client_installation_dir }}/{{ swarm_client_name }} -description '{{ swarm_client_description }}' -executors {{ swarm_client_executors }} -fsroot {{ swarm_client_working_dir }} -labels '{{ swarm_client_labels }}' -master {{ swarm_client_jenkins_master }} -mode {{ swarm_client_mode }} -name {{ swarm_client_jenkins_name }} -username {{ swarm_client_jenkins_master_user }} -password {{ swarm_client_jenkins_master_pass }} -retry {{ swarm_client_retries }}
+Restart=always

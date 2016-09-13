@@ -1,0 +1,22 @@
+---
+swarm_client_installation_dir: /construction/swarm-client
+swarm_client_local_user: root
+swarm_client_local_group: root
+swarm_client_version: 2.2
+swarm_client_name: 'swarm-client-{{ swarm_client_version }}.jar'
+swarm_client_url: 'https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/{{ swarm_client_version }}/swarm-client-{{ swarm_client_version }}-jar-with-dependencies.jar'
+swarm_client_service_path: /etc/systemd/system/
+swarm_client_service_file: swarm_client.service
+swarm_client_service_state: started
+swarm_client_service_enabled: true
+swarm_client_service_template: swarm_client.service.j2
+swarm_client_working_dir: /construction/jenkins-slave
+swarm_client_description: "I am a swarm node"
+swarm_client_executors: 1
+swarm_client_labels: useme
+swarm_client_jenkins_master: http://localhost:8080/
+swarm_client_jenkins_master_user: changeme
+swarm_client_jenkins_master_pass: changeme
+swarm_client_mode: exclusive
+swarm_client_jenkins_name: swarm-node
+swarm_client_retries: 5

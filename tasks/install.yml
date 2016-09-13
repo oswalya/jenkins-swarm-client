@@ -1,0 +1,16 @@
+---
+- name: ensure slave working dir
+  file:
+    path: '{{ swarm_client_installation_dir }}'
+    state: directory
+    owner: '{{ swarm_client_local_user }}'
+    group: '{{ swarm_client_local_group }}'
+  with_items:
+    - '{{ swarm_client_installation_dir }}'
+    - '{{ swarm_client_working_dir }}'
+
+- name: download swarm client jar
+  get_url:
+    url: '{{ swarm_client_url }}'
+    dest: '{{ swarm_client_installation_dir }}/{{ swarm_client_name }}'
+    mode: 0755

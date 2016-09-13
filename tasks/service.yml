@@ -1,0 +1,16 @@
+---
+# # Only available in Ansible 2.2 (still beta state during time of writing)
+#
+# - name: Ensure service started
+#   systemd:
+#     name: '{{ swarm_client_service_file }}'
+#     enabled: yes
+#     masked: no
+#     daemon_reload: yes
+#     state: started
+
+- name: Ensure service
+  service:
+    name: '{{ swarm_client_service_file }}'
+    state: '{{ swarm_client_service_state | default(omit) }}'
+    enabled: '{{ swarm_client_service_enabled | default(omit) }}'
