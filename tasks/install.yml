@@ -1,7 +1,7 @@
 ---
 - name: ensure slave working dir
   file:
-    path: '{{ swarm_client_installation_dir }}'
+    path: '{{ item }}'
     state: directory
     owner: '{{ swarm_client_local_user }}'
     group: '{{ swarm_client_local_group }}'
