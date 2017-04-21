@@ -2,7 +2,7 @@
 swarm_client_installation_dir: /construction/swarm-client
 swarm_client_local_user: root
 swarm_client_local_group: root
-swarm_client_version: 3.4
+swarm_client_version: 2.2
 swarm_client_name: 'swarm-client-{{ swarm_client_version }}.jar'
 swarm_client_url: 'https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client/{{ swarm_client_version }}/swarm-client-{{ swarm_client_version }}-jar-with-dependencies.jar'
 swarm_client_service_path: /etc/systemd/system/
