@@ -1,5 +1,5 @@
 ---
-swarm_client_installation_dir: /construction/swarm-client
+swarm_client_installation_dir: /opt/swarm-client
 swarm_client_local_user: root
 swarm_client_local_group: root
 swarm_client_version: 2.2
@@ -10,7 +10,7 @@ swarm_client_service_file: swarm_client.service
 swarm_client_service_state: started
 swarm_client_service_enabled: true
 swarm_client_service_template: swarm_client.service.j2
-swarm_client_working_dir: /construction/jenkins-slave
+swarm_client_working_dir: /opt/jenkins-slave
 swarm_client_description: "I am a swarm node"
 swarm_client_executors: 1
 swarm_client_labels: useme
